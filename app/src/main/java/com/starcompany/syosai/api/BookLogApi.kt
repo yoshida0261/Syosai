@@ -1,9 +1,8 @@
-package com.starcompany.syosai.api;
+package com.starcompany.syosai.api
 
-public class BookLogApi {
+class BookLogApi {
 
-    public boolean GetMyBook()
-    {
+    fun GetMyBook(): Boolean {
         // api アクセス
 
         // json 解析
@@ -12,14 +11,13 @@ public class BookLogApi {
 
         //
 
-        return  false;
+        return false
 
     }
 
     // 本の追加
     // 連携機能on のときに実施
-    public void AddMyBooks()
-    {
+    fun AddMyBooks() {
 
     }
 
