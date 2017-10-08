@@ -6,6 +6,16 @@ import java.util.List;
 
 public class Tundoku {
 
-    public List<Book>
-    
+    private List<Book> bookList;
+
+    public List<Book> getTundoku()
+    {
+        return bookList;
+    }
+
+    //
+    public void test()
+    {
+
+    }
 }
