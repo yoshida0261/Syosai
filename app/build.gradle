@@ -22,10 +22,17 @@ android {
 }
 
 dependencies {
+    final supportLibVersion     = "25.1.1"
+    final ormaVersion           = "4.2.0"
+    final retrofitVersion       = "2.1.0"
+    final okHttpVersion         = "3.6.0"
+    final daggerVersion         = "2.9"
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //compile "com.github.gfx.android.orma:orma:$ormaVersion"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support:design:25.3.0'

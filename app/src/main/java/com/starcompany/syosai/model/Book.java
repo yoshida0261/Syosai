@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Book {
 
-    private long id;
+    private long id;  //管理Id
     private String title;
     private String author;
     private Date 発売日;
