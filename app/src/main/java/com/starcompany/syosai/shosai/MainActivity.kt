@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.shosai)
-
-        //
         listView = findViewById(R.id.listView) as ListView
 
         //このへんの処理をフラグメントに移す
@@ -70,62 +68,34 @@ class MainActivity : AppCompatActivity() {
 */
     }
 
-public override fun onBackPressed() {
-val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
-if (drawer.isDrawerOpen(GravityCompat.START))
-{
-drawer.closeDrawer(GravityCompat.START)
-}
-else
-{
-super.onBackPressed()
-}
-}
 
-public override fun onCreateOptionsMenu(menu:Menu):Boolean {
- // Inflate the menu; this adds items to the action bar if it is present.
+    override fun onBackPressed() {
+        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
+        if (drawer.isDrawerOpen(GravityCompat.START))
+        {
+            drawer.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu:Menu):Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu)
-return true
-}
+        return true
+    }
 
-public override fun onOptionsItemSelected(item:MenuItem):Boolean {
- // Handle action bar item clicks here. The action bar will
+    override fun onOptionsItemSelected(item:MenuItem):Boolean {
+        // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.getItemId()
-
-
         if (id == R.id.action_settings)
-{
-return true
-}
-
-return super.onOptionsItemSelected(item)
-}
-
- /*
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        {
+            return true
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }*/
+        return super.onOptionsItemSelected(item)
+    }
+
 }
